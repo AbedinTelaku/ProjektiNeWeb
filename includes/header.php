@@ -9,9 +9,9 @@
                     <a href="ekonomi.php"><li>Ekonomi</li></a>
                     <a href="shendeti.php"><li>Shendeti</li></a>
                     <a href="login/login.php" target="_blank"><li><img id="login-image"src="https://image.flaticon.com/icons/png/512/295/295128.png"/></li></a>
-                    <a href="login/login.php" target="_blank"><li>Login and register</li></a>
+                    <a href="login/login.php" target="_blank"><li>Login</li></a>
+                    <a href="login/signup.php" target="_blank"><li>Register</li></a>
                 </ul>
-
     </div>
 </div>
 

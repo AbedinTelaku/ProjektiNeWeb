@@ -1,40 +1,34 @@
 <?php
-    session_start();
+  session_start();
 
-    if(isset($_SESSION['user_id'])){
-        header("Location: index.php");
+  if(isset($_SESSION['user_id'])){
+      header("Location: index.php");
+  }
+
+  require '../includes/dbconnect.php';
+
+  if(isset($_POST['submit'])){
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $password= password_hash($_POST['password'], PASSWORD_BCRYPT);
+    
+    $sql='INSERT INTO users (name,email,password) VALUES (:name, :email, :password")';
+    $query=$pdo->prepare($sql);
+    $query->bindParam('name', $name);
+    $query->bindParam('email',$email);
+    $query->bindParam('password',$password);
+
+    if($query->execute()){
+        $message="Jeni regjistruar me sukses";
+    }else{
+        $message="Ka nje problem gjate regjitstrimit";
     }
-  
-    require '../includes/dbconnect.php';
-  
-    if(isset($_POST['submit'])):
-      $name=$_POST['email'];
-      $email=$_POST['password'];
-      
-      $query=$pdo->prepare('SELECT id,name,email,password,roli FROM users where email=:email');
-      $query->bindParam(':email',$email);
-      $query->execute();
-
-      $user=$query->fetch();
-
-      if(count($user) > 0 && password_verify($password, $user['password'])){
-          $_SESSION['user_id']=$user['id'];
-          $_SESSION['name']=$user['name'];
-          $_SESSION['roli']=$user['roli'];
-
-          header("Location: ../Ks-press.php");
-
-
-      }else{
-          echo "Fjalkalimi ose emaili gabim";
-      }
-    endif;
+  }
 ?>
-
 <html>
 <head>
     <title>Login and Register</title>
-    <link rel="stylesheet" type="text/css" href="../css/loginstyle.css">
+    <link rel="stylesheet" type="text/css" href="../SignUpStyle.css">
     <link rel="stylesheet" type="text/css" href="../css/kspress-style.css">
 </head>
 <body>
@@ -49,8 +43,8 @@
         <div class="form-box">
             <div class="button-box">
                 <div id="btn"></div>
-                <button type="button" class="toggle-btn" onclick="login()">Login</button>
-                <!--<button type="button" class="toggle-btn" onclick="register()">Register</button> -->
+                <!--<button type="button" class="toggle-btn" onclick="login()">Login</button> -->
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
             <div class="social-icons">
                 <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png">
@@ -62,15 +56,15 @@
             
 
 
-            <form id="login" class="input-group" action="login.php" name="myForm" onsubmit="return(validateLogIn())" method="POST">
+            <!--<form id="login" class="input-group" action="login.php" name="myForm" onsubmit="return(validateLogIn())" method="POST">
                 <input type="email" class="input-field" name="email" value="" placeholder="Username" >
                 <input type="password" class="input-field" name="password" placeholder="Enter Password">
                 <input type="checkbox" class="chech-box"><span>Remember Password</span>
                 <button type="submit" class="submit-btn">Log in</button>
-            </form>
+            </form> -->
 
-            <form id="register" class="input-group" name="registerForm" onsubmit="return(validateRegister())">
-                <input type="text" class="input-field" value="" name="username" placeholder="Username" >
+            <form id="register" action="signup.php" class="input-group" name="registerForm" onsubmit="return(validateRegister())" method="POST">
+                <input type="text" class="input-field" value="" name="emri" placeholder="Shenoni emrin tuaj:" >
                 <input type="email" class="input-field" value=""name="email" placeholder="Email" >
                 <input type="password" class="input-field" value="" name="password" placeholder="Enter Password">
                 <input type="checkbox" class="chech-box"><span>I agree to the terms conditions</span>
@@ -84,7 +78,7 @@
 </div>
     </div>
     <script>
-        var x = document.getElementById("login");
+        //var x = document.getElementById("login");
         var y = document.getElementById("register");
         var z = document.getElementById("btn");
 
@@ -93,11 +87,11 @@
             y.style.left = "50px"
             z.style.left = "110px"
         }
-        function login(){
+        /*function login(){
             x.style.left = "50px"
             y.style.left = "450px"
             z.style.left = "0px"
-        }
+        } */
     </script>
 </div>
 
