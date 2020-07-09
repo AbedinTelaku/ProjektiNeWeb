@@ -1,5 +1,4 @@
 <?php
-    session_start();
 
     if(isset($_SESSION['user_id'])){
         header("Location: index.php");
@@ -33,7 +32,7 @@
 
 <html>
 <head>
-    <title>Login and Register</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="../css/loginstyle.css">
     <link rel="stylesheet" type="text/css" href="../css/kspress-style.css">
 </head>
@@ -53,9 +52,9 @@
                 <!--<button type="button" class="toggle-btn" onclick="register()">Register</button> -->
             </div>
             <div class="social-icons">
-                <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png">
-                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png">
-                <img src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/2659939281579738432-512.png">
+                <img src="../images/fb-login.png">
+                <img src="../images/tw-login.png">
+                <img src="../images/google-fb.png">
             </div>
 
             <script type="text/javascript" src="../js/loginjs.js"></script>
