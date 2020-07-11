@@ -66,7 +66,8 @@
                 <input type="email" class="input-field" name="email" value="" placeholder="Username" >
                 <input type="password" class="input-field" name="password" placeholder="Enter Password">
                 <input type="checkbox" class="chech-box"><span>Remember Password</span>
-                <button type="submit" class="submit-btn">Log in</button>
+                                
+              <button type="submit" class="submit-btn">Log in</button>
             </form>
 
             <form id="register" class="input-group" name="registerForm" onsubmit="return(validateRegister())">
