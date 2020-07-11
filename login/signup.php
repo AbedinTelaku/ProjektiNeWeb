@@ -12,7 +12,8 @@
     $email=$_POST['email'];
     $password= password_hash($_POST['password'], PASSWORD_BCRYPT);
     
-    $sql='INSERT INTO users (name,email,password) VALUES (:name, :email, :password")';
+    $sql="INSERT INTO users(name,email,password) VALUES ('{$name}', '{$email}', '{$password}')";
+    konfirmimi($sql);
     $query=$pdo->prepare($sql);
     $query->bindParam('name', $name);
     $query->bindParam('email',$email);
@@ -24,11 +25,20 @@
         $message="Ka nje problem gjate regjitstrimit";
     }
   }
+
+
+
+  function konfirmimi($result){
+    global $connect;
+    if(!$result){
+        die('DESHTOJ' . mysqli_error($connect));
+        }
+}
 ?>
 <html>
 <head>
-    <title>Login and Register</title>
-    <link rel="stylesheet" type="text/css" href="../SignUpStyle.css">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../css/SignUpStyle.css">
     <link rel="stylesheet" type="text/css" href="../css/kspress-style.css">
 </head>
 <body>
@@ -47,9 +57,9 @@
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
             <div class="social-icons">
-                <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png">
-                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png">
-                <img src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/2659939281579738432-512.png">
+                <img src="../images/fb-login.png">
+                <img src="../images/tw-login.png">
+                <img src="../images/google-fb.png">
             </div>
 
             <script type="text/javascript" src="../js/loginjs.js"></script>
@@ -68,7 +78,7 @@
                 <input type="email" class="input-field" value=""name="email" placeholder="Email" >
                 <input type="password" class="input-field" value="" name="password" placeholder="Enter Password">
                 <input type="checkbox" class="chech-box"><span>I agree to the terms conditions</span>
-                <button type="submit" class="submit-btn">Register</button>
+                <button type="submit" class="submit-btn" >Register</button>
             </form>
 
         </div>

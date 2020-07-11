@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <div class="header">
     <div class="inner_header">
             <div class="logo_container">
@@ -8,7 +11,7 @@
                     <a href="sport.php"><li>Sport</li></a>
                     <a href="ekonomi.php"><li>Ekonomi</li></a>
                     <a href="shendeti.php"><li>Shendeti</li></a>
-                    <a href="login/login.php" target="_blank"><li><img id="login-image"src="https://image.flaticon.com/icons/png/512/295/295128.png"/></li></a>
+                    <a href="login/index-admin.php" target="_blank"><li><img id="login-image"src="https://image.flaticon.com/icons/png/512/295/295128.png"/></li></a>
                     <a href="login/login.php" target="_blank"><li>Login</li></a>
                     <a href="login/signup.php" target="_blank"><li>Register</li></a>
                 </ul>
