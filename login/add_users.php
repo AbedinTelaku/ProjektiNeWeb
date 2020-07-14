@@ -1,30 +1,21 @@
 <?php
 session_start();
-if(isset($_SESSION['roli'])){
-   
 
-
-
- require '../includes/dbconnect.php';
-?>
-
-<?php
+require '../includes/dbconnect.php';
 
  if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
-    $personi=$_POST['personi'];
 
-    $sql="INSERT INTO users (name,email,password, added_by) VALUES(:name,:email,:password, :personi)";
-    $query=$pdo->prepare($sql);
-    $query->bindParam('name',$name);
-    $query->bindParam('email',$email);
-    $query->bindParam('password',$password);
-    $query->bindParam('added_by', $added_by);
+    $sql="INSERT INTO users (name,email,password,roli) VALUES('$name','$email','$password', '0')";
+   
+    $addUser = mysqli_query($pdo, $sql);
 
-    $query->execute();
-    header("Location: users.php");
+    if($addUser){
+       echo "New user added";
+    }
+
  }
 ?>
 
@@ -32,19 +23,18 @@ if(isset($_SESSION['roli'])){
  <form action="add_users.php" method="POST">
  Emri:
  <input type="text" name="name" placeholder="Shkruaj emrin tuaj">
- Mbiemri:
+ email:
  <input type="email" name="email" placeholder="Shkruaj emrin tuaj">
  Passwordi:
  <input type="password" name="password">
+<!--
 <input type="hidden" name="added_by" value="<?php echo $_SESSION['name']; ?> ">
+-->
 
  <input type="submit" name="submit" value="Dergo">
  </form>
 </div>
 
-<?php  } else{
-   header("Location: users.php");
-}
-
-
+<?php   
+   //header("Location: users.php");
 ?>

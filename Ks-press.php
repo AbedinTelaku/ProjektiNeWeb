@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    if(isset($_POST['submit'])){
+        session_destroy();
+        $index = "Ks-press.php";
+        header("Refresh:0; url=$index");
+
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,7 +21,9 @@
     <body>
 
 <!---- Header includes ---->
-<?php include 'includes/header.php'; ?>
+<?php 
+    include 'includes/header.php'; 
+?>
 
 
 

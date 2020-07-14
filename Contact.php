@@ -99,7 +99,11 @@ footer{
 
 
 <!---- Header includes ---->
-<?php include 'includes/header.php'; ?>
+<?php 
+    session_start();
+    include 'includes/header.php'; 
+
+?>
 
     <section id="theheader" class="mainContainer">
         <section class="form">

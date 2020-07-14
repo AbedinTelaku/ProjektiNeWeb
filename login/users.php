@@ -1,8 +1,8 @@
 <?php
   require '../includes/dbconnect.php';
 
-  $query=$pdo->query('SELECT * from users');
-  $users=$query->fetchALL();
+  //$query=$pdo->query('SELECT * from users');
+  //$users=$query->fetchALL();
 ?>
 <div class="container">
   <table>

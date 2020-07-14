@@ -8,7 +8,11 @@
     <body>
 
 <!---- Header includes ---->
-<?php include 'includes/header.php'; ?>
+<?php 
+    session_start();
+    include 'includes/header.php'; 
+    
+?>
 
       
         <div class="index">
