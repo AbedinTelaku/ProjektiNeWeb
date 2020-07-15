@@ -1,4 +1,3 @@
-
 <div class="header">
     <div class="inner_header">
             <div class="logo_container">
@@ -6,6 +5,7 @@
             </div>
                 <ul class="navigation">
                     <a href="../projektiphp/Ks-press.php"><li>Lajme</li></a>
+
                     <a href="../projektiphp/sport.php"><li>Sport</li></a>
                     <a href="../projektiphp/ekonomi.php"><li>Ekonomi</li></a>
                     <a href="../projektiphp/shendeti.php"><li>Shendeti</li></a>

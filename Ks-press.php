@@ -14,7 +14,7 @@
 <html>
     <head>
     <link rel="stylesheet" type="text/css" href="css/kspress-style.css">
-    
+        
     <title>KS-PRESS</title>
     
     </head>
@@ -22,16 +22,23 @@
 
 <!---- Header includes ---->
 <?php 
-    include 'includes/header.php'; 
+    include 'includes/headeri.php'; 
+?>
+<?php
+   include 'includes/slideri.php';
 ?>
 
+ 
+
+<!-- Full-width images with number and caption text -->
 
 
 
 
 
 
-        <div class="index">
+
+       <!-- <div class="index">
             <div class="news-wrapper">
                 <article>
                     <div class="heading-news-img">
@@ -43,7 +50,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> -->
        
 
        <div class="index-news">
@@ -91,7 +98,7 @@ echo $lajme;
         </div>
     </div>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footerii.php'; ?>
     
     </div>
 

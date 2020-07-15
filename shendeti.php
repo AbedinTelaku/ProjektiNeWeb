@@ -10,7 +10,7 @@
 <!---- Header includes ---->
 <?php 
     session_start();
-    include 'includes/header.php'; 
+    include 'includes/headeri.php'; 
 ?>
 
       
@@ -76,7 +76,7 @@ echo $shendeti;
         </div>
     </div>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footerii.php'; ?>
     
     </div>
 

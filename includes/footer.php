@@ -34,6 +34,7 @@ footer{
     bottom: 0;
     background-color: #262626;
 }
+
 </style>
 <footer>
            <div class="footer-wrapper">
