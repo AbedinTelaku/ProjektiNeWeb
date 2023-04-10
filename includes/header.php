@@ -4,12 +4,10 @@
                 <h1>KS-Press</h1>
             </div>
                 <ul class="navigation">
-                    <a href="../projektiphp/Ks-press.php"><li>Lajme</li></a>
-
-                    <a href="../projektiphp/sport.php"><li>Sport</li></a>
-                    <a href="../projektiphp/ekonomi.php"><li>Ekonomi</li></a>
-                    <a href="../projektiphp/shendeti.php"><li>Shendeti</li></a>
-                    <a href="../projektiphp/index-admin.php" ><li>Admin</li></a>
+                <a href="sport.php"><li>Sport</li></a>
+                    <a href="ekonomi.php"><li>Ekonomi</li></a>
+                    <a href="shendeti.php"><li>Shendeti</li></a>
+                    <a href="index-admin.php" ><li>Admin</li></a>
                     
                     <?php
                 

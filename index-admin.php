@@ -15,7 +15,7 @@
 
 session_start();
 
-require 'includes/header.php';
+require 'includes/headeri.php';
 
 if(isset($_SESSION['roli'])){
 

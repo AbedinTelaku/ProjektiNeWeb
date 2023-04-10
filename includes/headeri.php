@@ -69,6 +69,9 @@ font-size:20px;
 {
 color:black;
 }
+#header a{
+	color : white;
+}
 @media only screen and (max-width: 590px) {
 	#header
 	{
@@ -106,6 +109,7 @@ color:black;
 		display:block;
 		
 	}
+	
 
 	
 	
@@ -119,16 +123,16 @@ color:black;
 	
 <div id="header">
 		<div id="logo">
-			<h1>KS-Press</h1>
+			<h1><a href="Ks-Press.php">KS-Press</a></h1>
 		</div>
 	        <div id="menu">
 		   <ul>
 			<a ><li></li></a>
                     			
-                    <a href="../sport.php"><li>Sport</li></a>
-                    <a href="../projektiphp/ekonomi.php"><li>Ekonomi</li></a>
-                    <a href="../projektiphp/shendeti.php"><li>Shendeti</li></a>
-                    <a href="../projektiphp/index-admin.php" ><li>Admin</li></a>
+                    <a href="sport.php"><li>Sport</li></a>
+                    <a href="ekonomi.php"><li>Ekonomi</li></a>
+                    <a href="shendeti.php"><li>Shendeti</li></a>
+                    <a href="index-admin.php" ><li>Admin</li></a>
                     
                     <?php
                 
@@ -145,8 +149,8 @@ color:black;
                         
 
                     }else{
-                        echo '<a href="../projektiphp/login/login.php" ><li>Login</li></a>';
-                        echo '<a href="../projektiphp/login/signup.php" ><li>Register</li></a>';
+                        echo '<a href="login/login.php" ><li>Login</li></a>';
+                        echo '<a href="login/signup.php" ><li>Register</li></a>';
                     }
 
                     ?>

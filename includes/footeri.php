@@ -3,11 +3,11 @@
   /*margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, Sans-serif;*/
-
+   height: 500px;
   
 }
 .dummy_page {
-  height: 200px;
+  height: 600px;
   width: 100%;
   background-color: #f0f0f0;
   text-align: center;
@@ -19,7 +19,7 @@
   width: 100%;
   position: relative;
   height: auto;
-  /
+  
   background-color: #101010;
 }
 .footer .col {

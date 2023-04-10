@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="footer, address, phone, icons" />
 
-	<title>Responsive Footer</title>
+	<title>Footer</title>
 
 	<link rel="stylesheet" href="style.css">
 	
@@ -23,10 +23,10 @@
 	margin:0;
 }
 
-body{
+/*body{
 	font:16px/1.6 Arial,  sans-serif;
 }
-
+*/
 /*header{
 	text-align: center;
 	padding-top: 100px;
@@ -241,9 +241,9 @@ footer{
 				<p class="footer-links">
 					<a href="../projektiphp/Ks-press.php">Home</a>
 					|
-					<a href="../projektiphp/about-us.php">Rreth nesh</a>
+					<a href="about-us.html">Rreth nesh</a>
 					|
-					<a href="../projektiphp/Contact.php">Kontakti</a>
+					<a href="Contact.php">Kontakti</a>
 					|
 					
 				</p>
